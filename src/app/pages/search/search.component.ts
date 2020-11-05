@@ -15,12 +15,13 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
 
-  this.route.params
-  .subscribe( params => {
+    this.route.params
+      .subscribe( params => {
 
-    console.log(params['termino']);
-    this.ProductosService.buscarProducto( params['termino'] );
-  });
+        console.log(params['termino']);
+        this.ProductosService.buscarProducto( params['termino'] );
+
+    });
 
 
   }

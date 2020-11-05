@@ -60,8 +60,8 @@ export class ProductosService {
     }
 
     // tslint:disable-next-line: typedef
-    private filtrarProductos( termino: string){
-      console.log(this.productos);
+    private filtrarProductos( termino: string ) {
+    // console.log(this.productos);
       this.productosFiltrado = [];
 
       termino = termino.toLocaleLowerCase();
@@ -70,7 +70,7 @@ export class ProductosService {
 
         const tituloLower = prod.titulo.toLocaleLowerCase();
 
-        if ( prod.categoria.indexOf( termino ) >=0 || prod.titulo.indexOf( termino ) <=0 ){
+        if ( prod.categoria.indexOf( termino ) >= 0 || prod.titulo.indexOf( termino ) >= 0 ){
           this.productosFiltrado.push( prod );
         }
 

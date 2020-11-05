@@ -11,14 +11,17 @@ import { identifierModuleUrl } from '@angular/compiler';
 })
 export class HeaderComponent implements OnInit {
 
+  // tslint:disable-next-line: variable-name
   constructor( public _servicio: InfoPaginaService,
-                public router: Router ) { }
+               private router: Router ) { }
 
   ngOnInit(): void {
   }
 
   buscarProducto( termino: string){
-    if( termino.length <1){
+
+
+    if ( termino.length < 1 ) {
       return;
     }
 
